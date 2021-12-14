@@ -1,0 +1,373 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* NAVEGADOR------ MENUUUUUU*/
+input#hamburguesa-icono {
+    display: none;
+}
+body{
+    font-family: fantasy;
+    background-color: black;
+}
+
+input#hamburguesa-icono ~ ul{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    right: 100%;
+    
+    
+    
+}
+input#hamburguesa-icono:checked ~ul{
+    display: block;
+    right: 50%;
+    transition: all 0.3s linear;
+}
+
+header{
+    background-image: url(../imagenes/naver4.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position-y: -100px;
+    width: 100%;
+    clear: both;
+    display: table;
+}
+nav{
+    float: right;
+    margin-top: 10px;
+    
+}
+
+img{
+    width: 100px;
+    height: 100px;
+    float: left;
+    padding: 10px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-weight: 20px;
+    font-size: 20px;
+}
+nav>ul>li{
+    list-style: none;
+    margin-left: 25px;
+    padding: 25px;
+    float: left;
+    position: relative;
+    
+}
+label{
+    color: white;
+}
+#menu{
+    width: 95%;
+    margin: 0 auto;
+}
+section#inicial>div{
+    margin-top: 10%;
+    margin-left: 5%; 
+    margin-right: 10%;
+    padding-left: 5%;
+    padding-right: 10%;
+    padding-top: 10%;
+    display:flex;
+    align-items:flex-end;
+    flex-direction: column;
+}    
+section#inicial>div>h1{
+    color: white;
+    font-size: 3rem;
+}
+section#inicial>div>h2{
+    font-size: 1.5rem;
+    display: flex;
+    align-items:center;
+}
+
+@media only screen and (min-width: 600px) {
+    label{
+        display: none;
+        
+    }
+    input#hamburguesa-icono~ul{
+        position: static; 
+        display: flex;
+        background-color: transparent;
+    } 
+    nav>ul>li{
+        margin-left: 75px;
+    }
+    section#inicial>div{
+        position:relative;
+        margin-top: 0 ;
+        margin-left: 20%; 
+        margin-right: 20%;
+        padding-left: 20%;
+        padding-right: 20%;
+        display:flex;
+        align-items:flex-start;
+        padding-top: 10%;
+        flex-direction: row;
+
+    
+    }
+    
+    section#inicial>div>h1{
+        color: rgb(214, 214, 214);
+        font-size: 5rem;
+    }
+    
+    section#inicial>div>h2{
+        background: -webkit-linear-gradient(#ff0000, #7686fd);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 2rem;
+        display: flex;
+        align-items:center;
+        padding-left: 10%;
+        padding-top: 5%;
+    }
+    
+}
+
+nav ul li a::before{
+    display: block;
+    content: "";
+    width: 0%;
+    background: gainsboro;
+    height: 10px;
+    top: 0;
+    position: absolute;
+    transition: width 1s;
+
+}
+
+nav ul li a:hover:before{
+    width: 100%;
+}
+
+/*CUERPO-------- */
+section#inicial{
+    position: relative;
+    margin-left:0;
+    margin-top: 0;
+    height: 800px;
+    width: 100%;
+    background-image: url(../imagenes/fondo11.jpg);
+    /*background: no-repeat;*/
+    background-size: 100%;
+    
+
+}
+section#aboutme{
+    background-color: rgb(15, 15, 29);
+    font-size: 1rem;
+    padding-left: 10%;
+    padding-top: 10%;
+    padding-right: 10%;
+    padding-bottom: 20%;
+    display: flex;
+    justify-content: center;
+}
+section#aboutme>div>img{
+    width:500px ;
+    height: 500px;
+    border-radius: 15px;
+    
+}
+section#aboutme>div{
+    background-color: rgb(26, 29, 68);
+    font-size: 1rem;
+    width:1000px ;
+    height: 500px;
+    border-radius: 15px;
+}
+
+section#aboutme>div>h2{
+    font-size: 2rem;
+    color: white;
+    padding-top: 2%;
+    padding-bottom: 1%;
+}
+section#aboutme>div>h3{
+    color: white;
+    padding-top: 1%;
+    padding-bottom: 2%;
+}
+:root{
+    --facebook:#3b5999;
+    --instagram:#e4405f;
+    --twitter: #55acee;
+    --whatsapp: #08bd17;
+    --linkedin: #0077b5;
+}
+
+.redes {
+    display: flex;
+    height: 20vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.redes ul li{
+    display: inline-block;
+    margin: 0 5px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+}
+
+.redes ul li a{
+    display: block;
+    padding: 0 10px;
+    background:rgb(142, 150, 253);
+    color: white;
+    line-height: 50px;
+    font-size: 18px; 
+    box-shadow: 0 3px 5px 0px blue; 
+    border-radius: 5px;
+    transition: 0.2s;  
+}
+
+.redes ul:hover a{
+    filter: blur(2px);
+}
+.redes ul li a:hover{
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 5px 5px 0px blue; 
+    filter: none;
+}
+.redes ul li .facebook:hover{
+    background: var(--facebook);
+}
+.redes ul li .instagram:hover{
+    background: var(--instagram);
+}
+.redes ul li .twitter:hover{
+    background: var(--twitter);
+}
+.redes ul li .whatsapp:hover{
+    background: var(--whatsapp);
+}
+.redes ul li .linkedin:hover{
+    background: var(--linkedin);
+}
+
+/*estilos*/
+
+section#servicios{
+    background:rgb(9, 9, 32)  ;
+    color: white;
+    padding-left: 5%;
+    padding-top: 10%;
+    padding-right: 5%;
+    padding-bottom: 20%;
+    display: flex;
+    justify-content: center;;
+}
+section#servicios div{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+section#servicios h2{
+    display: flex;
+    justify-content: center;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    font-size: 50px;
+}
+section#servicios div{
+    justify-content: center;
+    background:rgb(26, 29, 68);
+    width: 100%;
+    height: 600px;
+    border-radius: 30px;
+    margin-bottom: 100px;
+
+}
+.imagenes6{
+    display: flex;
+    height: 20vh;
+    align-items: center;
+    justify-content: center;
+    
+}
+.imagenes6 ul li{
+    display: inline-block;
+    margin-right: 20px;
+    width: 200px;
+    height: 400px;
+    text-align: center;
+    background: rgb(3, 34, 16);
+    justify-content: center;
+    align-items: center;
+}
+.imagenes6 ul li a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*portafolio*/
+
+section#portafolio{
+    background:rgb(9, 9, 32)  ;
+    color: white;
+    padding-left: 5%;
+    padding-top: 10%;
+    padding-right: 5%;
+    padding-bottom: 20%;
+    display: flex;
+    justify-content: center;;
+}
+section#portafolio div{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+section#portafolio h2{
+    display: flex;
+    justify-content: center;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    font-size: 50px;
+}
+section#portafolio div{
+    justify-content: center;
+    background:rgb(26, 29, 68);
+    width: 100%;
+    height: 600px;
+    border-radius: 30px;
+    margin-bottom: 100px;
+
+}
+.imagenes6{
+    display: flex;
+    height: 20vh;
+    align-items: center;
+    justify-content: center;
+    
+}
+.imagenes6 ul li{
+    display: inline-block;
+    margin-right: 20px;
+    width: 200px;
+    height: 400px;
+    text-align: center;
+    background: seagreen;
+    justify-content: center;
+    align-items: center;
+}
+.imagenes6 ul li a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
